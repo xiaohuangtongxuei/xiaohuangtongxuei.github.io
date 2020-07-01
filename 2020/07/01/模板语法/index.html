@@ -6,16 +6,41 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Xiaohuangtongxue</title>
+  <title>模板语法 | Xiaohuangtongxue</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端学学学冲冲冲！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Xiaohuangtongxue">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="内容概述 插值操作 绑定属性 计算属性 事件监听 条件判断 循环遍历 阶段案例 v-model   Mustache 如何将data中的文本数据，插入到HTML中呢？   我们已经学习过了，可以通过Mustache语法(也就是双大括号)。 Mustache: 胡子&#x2F;胡须.   我们可以像下面这样来使用，并且数据是响应式的    v-once 但是，在某些情况下，我们可能不希望界面随意的跟随改变">
+<meta property="og:type" content="article">
+<meta property="og:title" content="模板语法">
+<meta property="og:url" content="http://yoursite.com/2020/07/01/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/index.html">
 <meta property="og:site_name" content="Xiaohuangtongxue">
-<meta property="og:description" content="前端学学学冲冲冲！">
+<meta property="og:description" content="内容概述 插值操作 绑定属性 计算属性 事件监听 条件判断 循环遍历 阶段案例 v-model   Mustache 如何将data中的文本数据，插入到HTML中呢？   我们已经学习过了，可以通过Mustache语法(也就是双大括号)。 Mustache: 胡子&#x2F;胡须.   我们可以像下面这样来使用，并且数据是响应式的    v-once 但是，在某些情况下，我们可能不希望界面随意的跟随改变">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103543390.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103524929.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103528844.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103512682.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103503076.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103439327.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103448116.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103419634.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103424668.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103357553.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103402028.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103341312.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701102919137.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103313173.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103721846.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103804655.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103916969.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103932141.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701104035249.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701104211483.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701104302877.png">
+<meta property="og:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701104313846.png">
+<meta property="article:published_time" content="2020-07-01T11:48:33.000Z">
+<meta property="article:modified_time" content="2020-07-01T12:10:01.727Z">
 <meta property="article:author" content="小黄同学">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/07/01/images/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/image-20200701103543390.png">
   
     <link rel="alternative" href="/atom.xml" title="Xiaohuangtongxue" type="application/atom+xml">
   
@@ -155,16 +180,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-模板语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-模板语法" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/01/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/">模板语法</a>
+    <h1 class="article-title" itemprop="name">
+      模板语法
     </h1>
   
 
@@ -446,6 +469,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -453,16 +497,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/01/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/01/%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/01/%E9%82%82%E9%80%85Vuejs/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">邂逅Vuejs</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -482,529 +585,14 @@
 
 
 
-
   
-    <article id="post-邂逅Vuejs" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/01/%E9%82%82%E9%80%85Vuejs/">邂逅Vuejs</a>
-    </h1>
   
 
-        
-        <a href="/2020/07/01/%E9%82%82%E9%80%85Vuejs/" class="archive-article-date">
-  	<time datetime="2020-07-01T11:44:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="内容概述"><a href="#内容概述" class="headerlink" title="内容概述"></a>内容概述</h2><ul>
-<li>认识Vuejs</li>
-</ul>
-<ol>
-<li>为什么学习Vuejs</li>
-<li>简单认识一下Vuejs</li>
-</ol>
-<ul>
-<li>Vuejs安装方式</li>
-</ul>
-<ol>
-<li>CDN引入</li>
-<li>下载和引入</li>
-<li>NPM安装管理</li>
-</ol>
-<ul>
-<li>Vuejs初体验</li>
-</ul>
-<ol>
-<li>Hello Vuejs</li>
-<li>Vue列表展示</li>
-<li>案例：计数器</li>
-</ol>
-<ul>
-<li>Vuejs的MVVM</li>
-</ul>
-<ol>
-<li>Vue中的MVVM</li>
-</ol>
-<hr>
-<h2 id="为什么学习Vuejs？"><a href="#为什么学习Vuejs？" class="headerlink" title="为什么学习Vuejs？"></a>为什么学习Vuejs？</h2><ul>
-<li>我相信每个人学习Vue的目的是各部相同的。</li>
-</ul>
-<ol>
-<li>可能你的公司正要将原有的项目使用Vue进行重构。</li>
-<li>也可能是你的公司新项目决定使用Vue的技术栈。</li>
-<li>当然，如果你现在正在换工作，你会发现招聘前端的需求中，10个有8个都对Vue有或多或少的要求。</li>
-<li>当然，作为学习者我们知道Vuejs目前非常火，可以说是前端必备的一个技能。</li>
-</ol>
-<p><img src="../images/%E9%82%82%E9%80%85Vuejs/image-20200701104544270-1593603918443.png" alt="image-20200701104544270"></p>
-<p><img src="../images/%E9%82%82%E9%80%85Vuejs/image-20200701104555401.png" alt="image-20200701104555401"></p>
-<p><img src="../images/%E9%82%82%E9%80%85Vuejs/image-20200701104607209.png" alt="image-20200701104607209"></p>
-<p><img src="../images/%E9%82%82%E9%80%85Vuejs/image-20200701104611178.png" alt="image-20200701104611178"></p>
-<h2 id="简单认识一下Vuejs"><a href="#简单认识一下Vuejs" class="headerlink" title="简单认识一下Vuejs"></a>简单认识一下Vuejs</h2><ul>
-<li>Vue (读音 /vjuː/，类似于 <strong>view</strong>)，不要读错。</li>
-<li>Vue是一个渐进式的框架，什么是渐进式的呢？</li>
-</ul>
-<ol>
-<li>渐进式意味着你可以将Vue作为你应用的一部分嵌入其中，带来更丰富的交互体验。</li>
-<li>或者如果你希望将更多的业务逻辑使用Vue实现，那么Vue的核心库以及其生态系统。</li>
-<li>比如Core+Vue-router+Vuex，也可以满足你各种各样的需求。</li>
-</ol>
-<ul>
-<li>Vue有很多特点和Web开发中常见的高级功能</li>
-</ul>
-<ol>
-<li>解耦视图和数据</li>
-<li>可复用的组件</li>
-<li>前端路由技术</li>
-<li>状态管理</li>
-<li>虚拟DOM</li>
-</ol>
-<ul>
-<li><p>这些特点，你不需要一个个去记住，我们在后面的学习和开发中都会慢慢体会到的，一些技术点我也会在后面进行讲解。</p>
-</li>
-<li><p>学习Vuejs的前提？</p>
-</li>
-</ul>
-<ol>
-<li>从零学习Vue开发，并不需要你具备其他类似于Angular、React，甚至是jQuery的经验。</li>
-<li>但是你需要具备一定的HTML、CSS、JavaScript基础。</li>
-</ol>
-<hr>
-<h2 id="Hello-Vuejs"><a href="#Hello-Vuejs" class="headerlink" title="Hello Vuejs"></a>Hello Vuejs</h2><ul>
-<li>我们来做我们的第一个Vue程序，体验一下Vue的响应式</li>
-<li><strong>代码做了什么事情？</strong></li>
-<li>我们来阅读JavaScript代码，会发现创建了一个Vue对象。</li>
-<li>创建Vue对象的时候，传入了一些options：{}</li>
-</ul>
-<ol>
-<li>{}中包含了el属性：该属性决定了这个Vue对象挂载到哪一个元素上，很明显，我们这里是挂载到了id为app的元素上</li>
-<li>{}中包含了data属性：该属性中通常会存储一些数据<ol>
-<li>这些数据可以是我们直接定义出来的，比如像上面这样。</li>
-<li>也可能是来自网络，从服务器加载的。</li>
-</ol>
-</li>
-</ol>
-<ul>
-<li>浏览器执行代码的流程：</li>
-</ul>
-<ol>
-<li>执行到10~13行代码显然出对应的HTML</li>
-<li>执行第16行代码创建Vue实例，并且对原HTML进行解析和修改。</li>
-</ol>
-<ul>
-<li>并且，目前我们的代码是可以做到响应式的。</li>
-</ul>
-<p><img src="../images/%E9%82%82%E9%80%85Vuejs/image-20200701104622625.png" alt="image-20200701104622625"></p>
-<hr>
-<h2 id="Vue列表显示"><a href="#Vue列表显示" class="headerlink" title="Vue列表显示"></a>Vue列表显示</h2><ul>
-<li>现在，我们来展示一个更加复杂的数据：数据列表。</li>
-</ul>
-<ol>
-<li>比如我们现在从服务器请求过来一个列表</li>
-<li>希望展示到HTML中。</li>
-</ol>
-<ul>
-<li>HTML代码中，使用v-for指令</li>
-</ul>
-<ol>
-<li>该指令我们后面会详细讲解，这里先学会使用。</li>
-</ol>
-<ul>
-<li><p>是不是变得So Easy，我们再也不需要在JavaScript代码中完成DOM的拼接相关操作了</p>
-</li>
-<li><p>而且，更重要的是，它还是响应式的。</p>
-</li>
-</ul>
-<ol>
-<li>也就是说，当我们数组中的数据发生改变时，界面会自动改变。</li>
-<li>依然让我们打开开发者模式的console，来试一下</li>
-</ol>
-<p><img src="../images/%E9%82%82%E9%80%85Vuejs/image-20200701104636511.png" alt="image-20200701104636511"></p>
-<p><img src="../images/%E9%82%82%E9%80%85Vuejs/image-20200701104643562.png" alt="image-20200701104643562"></p>
-<p><img src="../images/%E9%82%82%E9%80%85Vuejs/image-20200701104648849.png" alt="image-20200701104648849"></p>
-<p><img src="../images/%E9%82%82%E9%80%85Vuejs/image-20200701104700661.png" alt="image-20200701104700661"></p>
-<hr>
-<h2 id="案例：计数器"><a href="#案例：计数器" class="headerlink" title="案例：计数器"></a>案例：计数器</h2><ul>
-<li>现在，我们来实现一个小的计数器</li>
-</ul>
-<ol>
-<li>点击 + 计数器+1</li>
-<li>点击 -  计数器 -1</li>
-</ol>
-<ul>
-<li>这里，我们又要使用新的指令和属性了</li>
-</ul>
-<ol>
-<li>新的属性：methods，该属性用于在Vue对象中定义方法。</li>
-<li>新的指令：@click, 该指令用于监听某个元素的点击事件，并且需要指定当发生点击时，执行的方法(方法通常是methods中定义的方法)</li>
-</ol>
-<ul>
-<li>你可能会疑惑？</li>
-</ul>
-<ol>
-<li>这些@click是什么东西？</li>
-<li>Vue对象中又是定义el/data/methods，到底都有哪些东西可以定义，以及它们的作用是什么？</li>
-<li>这些疑惑在后续学习中都会一一解开。</li>
-</ol>
-<p><img src="../images/%E9%82%82%E9%80%85Vuejs/image-20200701104713116.png" alt="image-20200701104713116"></p>
-<hr>
-<h2 id="Vue中的MVVM"><a href="#Vue中的MVVM" class="headerlink" title="Vue中的MVVM"></a>Vue中的MVVM</h2><ul>
-<li>什么是MVVM呢？</li>
-</ul>
-<ol>
-<li>通常我们学习一个概念，最好的方式是去看维基百科(对，千万别看成了百度百科)</li>
-<li><a href="https://zh.wikipedia.org/wiki/MVVM" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/MVVM</a></li>
-<li>维基百科的官方解释，我们这里不再赘述。</li>
-</ol>
-<ul>
-<li>我们直接来看Vue的MVVM</li>
-</ul>
-<p><img src="../images/%E9%82%82%E9%80%85Vuejs/image-20200701104721204.png" alt="image-20200701104721204"></p>
-<ul>
-<li>View层：</li>
-</ul>
-<ol>
-<li>视图层</li>
-<li>在我们前端开发中，通常就是DOM层。</li>
-<li>主要的作用是给用户展示各种信息。</li>
-</ol>
-<ul>
-<li>Model层：</li>
-</ul>
-<ol>
-<li>数据层</li>
-<li>数据可能是我们固定的死数据，更多的是来自我们服务器，从网络上请求下来的数据。</li>
-<li>在我们计数器的案例中，就是后面抽取出来的obj，当然，里面的数据可能没有这么简单。</li>
-</ol>
-<ul>
-<li>VueModel层：</li>
-</ul>
-<ol>
-<li>视图模型层</li>
-<li>视图模型层是View和Model沟通的桥梁。</li>
-<li>一方面它实现了Data Binding，也就是数据绑定，将Model的改变实时的反应到View中</li>
-<li>另一方面它实现了DOM Listener，也就是DOM监听，当DOM发生一些事件(点击、滚动、touch等)时，可以监听到，并在需要的情况下改变对应的Data。</li>
-</ol>
-<hr>
-<h2 id="计数器的MVVM"><a href="#计数器的MVVM" class="headerlink" title="计数器的MVVM"></a>计数器的MVVM</h2><ul>
-<li>计数器的MVVM</li>
-</ul>
-<ol>
-<li><p>我们的计数器中就有严格的MVVM思想</p>
-<ol>
-<li>View依然是我们的DOM</li>
-<li>Model就是我们我们抽离出来的obj</li>
-<li>ViewModel就是我们创建的Vue对象实例</li>
-</ol>
-</li>
-<li><p>它们之间如何工作呢？</p>
-<ol>
-<li>首先ViewModel通过Data Binding让obj中的数据实时的在DOM中显示。</li>
-<li>其次ViewModel通过DOM Listener来监听DOM事件，并且通过methods中的操作，来改变obj中的数据。</li>
-</ol>
-</li>
-</ol>
-<ul>
-<li>有了Vue帮助我们完成VueModel层的任务，在后续的开发，我们就可以专注于数据的处理，以及DOM的编写工作了。</li>
-</ul>
-<hr>
-<h2 id="创建Vue实例传入的options"><a href="#创建Vue实例传入的options" class="headerlink" title="创建Vue实例传入的options"></a>创建Vue实例传入的options</h2><ul>
-<li><p>你会发现，我们在创建Vue实例的时候，传入了一个对象options。</p>
-</li>
-<li><p>这个options中可以包含哪些选项呢？</p>
-<ol>
-<li><a href="[https://cn.vuejs.org/v2/api/#%E9%80%89%E9%A1%B9-%E6%95%B0%E6%8D%AE](https://cn.vuejs.org/v2/api/)">查看详情</a></li>
-</ol>
-</li>
-<li><p>目前掌握这些选项：</p>
-</li>
-</ul>
-<ol>
-<li><p><strong>el:</strong> </p>
-<ol>
-<li>类型：string | HTMLElement</li>
-<li>作用：决定之后Vue实例会管理哪一个DOM。</li>
-</ol>
-</li>
-<li><p><strong>data:</strong> </p>
-<ol>
-<li>类型：Object | Function （组件当中data必须是一个函数）</li>
-<li>作用：Vue实例对应的数据对象。</li>
-</ol>
-</li>
-<li><p><strong>methods:</strong> </p>
-<ol>
-<li>类型：{ [key: string]: Function }</li>
-<li>作用：定义属于Vue的一些方法，可以在其他地方调用，也可以在指令中使用。</li>
-</ol>
-</li>
-</ol>
-<hr>
-<h2 id="Vue的生命周期"><a href="#Vue的生命周期" class="headerlink" title="Vue的生命周期"></a>Vue的生命周期</h2><p><img src="../images/%E9%82%82%E9%80%85Vuejs/image-20200701104828108.png" alt="image-20200701104828108"></p>
-<p><img src="../images/%E9%82%82%E9%80%85Vuejs/image-20200701104832103.png" alt="image-20200701104832103"></p>
-<p><img src="../images/%E9%82%82%E9%80%85Vuejs/image-20200701104836305.png" alt="image-20200701104836305"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/01/%E9%82%82%E9%80%85Vuejs/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Hexo学习" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/01/Hexo%E5%AD%A6%E4%B9%A0/">Hexo学习</a>
-    </h1>
   
 
-        
-        <a href="/2020/07/01/Hexo%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2020-07-01T05:48:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>title: 此文介绍Hexo建站的流程…<br>date: 2020-06-29 20:59:40<br>tags:</p>
-<p>##安装Node.js</p>
-<p>node -v #查看node版本<br>npm -v #查看npm版本<br>npm install -g cnpm –registry=<a href="http://registry.npm.taobao.org" target="_blank" rel="noopener">http://registry.npm.taobao.org</a> #安装淘宝的cnpm 管理器<br>cnpm -v #查看cnpm版本<br>cnpm install -g hexo-cli #安装hexo框架<br>hexo -v #查看hexo版本<br>mkdir blog #创建blog目录<br>cd blog #进入blog目录<br>sudo hexo init #生成博客 初始化博客<br>hexo s #启动本地博客服务<br><a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> #本地访问地址<br>hexo n “我的第一篇文章” #创建新的文章<br>#返回blog目录<br>hexo clean #清理<br>hexo g #生成<br>#Github创建一个新的仓库 YourGithubName.github.io<br>cnpm install –save hexo-deployer-git #在blog目录下安装git部署插件</p>
-<hr>
-<p>##配置 _config.yml</p>
-<p># Deployment<br>## Docs: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">https://hexo.io/docs/deployment.html</a><br>deploy:<br>type: git<br>repo: <a href="https://github.com/xiaohuangtongxuei/xiaohuangtongxuei.github.io.git" target="_blank" rel="noopener">https://github.com/xiaohuangtongxuei/xiaohuangtongxuei.github.io.git</a><br>branch: master</p>
-<hr>
-<p>##hexo d #部署到Github仓库里</p>
-<p><a href="https://xiaohuangtongxuei.github.io/" target="_blank" rel="noopener">https://xiaohuangtongxuei.github.io/</a> #访问这个地址可以查看博客</p>
-<p>git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="noopener">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia #下载yilia主题到本地</p>
-<p>#修改hexo根目录下的 _config.yml 文件 ： theme: yilia</p>
-<p>hexo c #清理一下<br>hexo g #生成<br>hexo d #部署到远程Github仓库<br><a href="https://xiaohuangtongxuei.github.io/" target="_blank" rel="noopener">https://xiaohuangtongxuei.github.io/</a> #查看博客</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/01/Hexo%E5%AD%A6%E4%B9%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/01/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">第一篇博客</a>
-    </h1>
   
 
-        
-        <a href="/2020/07/01/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2020-07-01T04:13:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="标题一"><a href="#标题一" class="headerlink" title="标题一"></a>标题一</h2><hr>
-<h2 id="标题二"><a href="#标题二" class="headerlink" title="标题二"></a>标题二</h2><hr>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/01/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2020/07/01/hello-world/" class="archive-article-date">
-  	<time datetime="2020-07-01T04:08:42.717Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/01/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -1027,8 +615,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
